@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CYORA — Ceylon Cinnamon Exporter, Sri Lanka</title>
+<meta name="description" content="CYORA presents Ceylon cinnamon sticks and pure Ceylon cinnamon powder from Sri Lanka for international importers, wholesalers, distributors and food businesses.">
+<meta property="og:title" content="CYORA — Nature’s Finest. From Sri Lanka.">
+<meta property="og:description" content="Ceylon cinnamon sticks and powder from Sri Lanka, presented for international markets. Wholesale and export enquiries welcome.">
+<meta property="og:type" content="website">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#10100E;color:#F7F3EB;font-family:'Jost','Helvetica Neue',system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#C7A56A}a:hover{color:#E3C892}
+::selection{background:#C7A56A;color:#10100E}
+.wrap{width:100%;max-width:1320px;margin:0 auto;padding:0 56px}
+.serif{font-family:'Cormorant Garamond','Cormorant',Georgia,serif;font-weight:300;letter-spacing:-.01em}
+.eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:#C7A56A;font-weight:400;display:flex;align-items:center;gap:16px}
+.eyebrow::before{content:"";width:36px;height:1px;background:#C7A56A}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 32px;font-family:'Jost',sans-serif;font-size:12px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid #C7A56A;cursor:pointer;transition:background .5s cubic-bezier(.2,.7,.2,1),color .5s,border-color .5s}
+.btn-gold{background:#C7A56A;color:#10100E}.btn-gold:hover{background:#F7F3EB;border-color:#F7F3EB;color:#10100E}
+.btn-ghost{background:transparent;color:#F7F3EB;border-color:rgba(247,243,235,.45)}.btn-ghost:hover{border-color:#C7A56A;color:#C7A56A}
+.btn-ink{background:#10100E;color:#F7F3EB;border-color:#10100E}.btn-ink:hover{background:#7A4227;border-color:#7A4227;color:#F7F3EB}
+.btn-line{background:transparent;color:#10100E;border-color:#10100E}.btn-line:hover{background:#10100E;color:#F7F3EB}
+.link-arrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:#C7A56A;min-height:44px}
+.link-arrow svg{transition:transform .5s cubic-bezier(.2,.7,.2,1)}.link-arrow:hover svg{transform:translateX(6px)}
+/* navigation */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .6s,padding .6s,border-color .6s;border-bottom:1px solid transparent;padding:22px 0}
+.nav-solid{background:rgba(16,16,14,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:rgba(199,165,106,.18);padding:12px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.mark{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:400;letter-spacing:.42em;color:#F7F3EB;text-decoration:none;padding-left:.42em;min-height:44px;display:flex;align-items:center}
+.mark:hover{color:#C7A56A}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{color:rgba(247,243,235,.82);text-decoration:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase;position:relative;padding:12px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:6px;height:1px;background:#C7A56A;transition:right .5s cubic-bezier(.2,.7,.2,1)}
+.nav-links a:hover{color:#F7F3EB}.nav-links a:hover::after,.nav-links a.on::after{right:0}
+.nav-links a.on{color:#C7A56A}
+.nav-cta{min-height:46px;padding:0 22px}
+.burger{display:none;width:48px;height:48px;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(247,243,235,.35);color:#F7F3EB;cursor:pointer}
+.mnav{position:fixed;inset:0;z-index:49;background:#10100E;padding:120px 28px 40px;display:flex;flex-direction:column;gap:6px;animation:fade .5s both}
+.mnav a.ml{font-family:'Cormorant Garamond',Georgia,serif;font-size:38px;color:#F7F3EB;text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(199,165,106,.18)}
+@media(max-width:1080px){.nav-links{display:none}.burger{display:inline-flex}.nav-cta{display:none}}
+/* photo placeholders */
+.ph{position:relative;overflow:hidden;margin:0;background:#1A1814;isolation:isolate}
+.ph-art{position:absolute;inset:0;background:radial-gradient(120% 90% at 70% 20%,rgba(199,165,106,.16),transparent 55%),repeating-linear-gradient(135deg,rgba(199,165,106,.06) 0 1px,transparent 1px 16px),#1A1814;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.ph-green .ph-art{background:radial-gradient(120% 90% at 30% 15%,rgba(214,190,130,.20),transparent 55%),repeating-linear-gradient(135deg,rgba(247,243,235,.05) 0 1px,transparent 1px 16px),#22352A}
+.ph-brown .ph-art{background:radial-gradient(110% 90% at 65% 30%,rgba(230,170,110,.22),transparent 55%),repeating-linear-gradient(135deg,rgba(247,243,235,.05) 0 1px,transparent 1px 16px),#4A2817}
+.ph-ivory .ph-art{background:radial-gradient(110% 90% at 60% 25%,rgba(255,255,255,.6),transparent 55%),repeating-linear-gradient(135deg,rgba(122,66,39,.08) 0 1px,transparent 1px 16px),#E7DFCF}
+.zoom:hover .ph-art{transform:scale(1.045)}
+.ph-cap{position:absolute;left:20px;bottom:18px;right:20px;z-index:2;display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,243,235,.62)}
+.ph-cap b{font-weight:500;color:#C7A56A;letter-spacing:.24em}
+.ph-ivory .ph-cap{color:rgba(16,16,14,.62)}.ph-ivory .ph-cap b{color:#7A4227}
+.ph-frame{position:absolute;inset:14px;border:1px solid rgba(199,165,106,.22);z-index:1;pointer-events:none}
+.shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(16,16,14,.55) 0%,rgba(16,16,14,.15) 40%,rgba(16,16,14,.85) 100%)}
+/* motion */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes drift{from{transform:scale(1.12) translate3d(-1%,0,0)}to{transform:scale(1) translate3d(0,0,0)}}
+@keyframes pulse{0%{r:6;opacity:.9}100%{r:46;opacity:0}}
+.rise{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.25s}.d2{animation-delay:.5s}.d3{animation-delay:.75s}.d4{animation-delay:1s}
+.drift .ph-art{animation:drift 22s ease-out both}
+@supports (animation-timeline: view()){.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* sections */
+.sec{padding:160px 0}
+.ivory{background:#F7F3EB;color:#10100E}
+.ivory .eyebrow{color:#7A4227}.ivory .eyebrow::before{background:#7A4227}
+.forest{background:#263C30}
+.lede{font-size:19px;line-height:1.8;color:rgba(247,243,235,.78);max-width:640px;text-wrap:pretty}
+.ivory .lede{color:rgba(16,16,14,.74)}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(460px,100%),1fr));gap:96px;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(520px,100%),1fr));gap:40px}
+.pcard{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:#171613;border:1px solid rgba(199,165,106,.16);transition:border-color .6s}
+.pcard:hover{border-color:rgba(199,165,106,.6)}
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:rgba(16,16,14,.12);border:1px solid rgba(16,16,14,.12)}
+.val{background:#F7F3EB;padding:48px 36px 52px;display:flex;flex-direction:column;gap:20px}
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:1px;background:rgba(199,165,106,.2);border:1px solid rgba(199,165,106,.2)}
+.chip{background:#10100E;padding:22px 24px;display:flex;align-items:center;gap:14px;font-size:14px;letter-spacing:.06em;color:#F7F3EB}
+.rule{height:1px;background:linear-gradient(90deg,transparent,rgba(199,165,106,.55),transparent);border:0;margin:0}
+/* footer */
+.foot{background:#0B0B0A;border-top:1px solid rgba(199,165,106,.18);padding:110px 0 40px;color:rgba(247,243,235,.72)}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:56px}
+.foot h4{margin:0 0 22px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#C7A56A;font-weight:400}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.foot ul a{color:rgba(247,243,235,.72);text-decoration:none;font-size:14px;display:inline-flex;min-height:32px;align-items:center}
+.foot ul a:hover{color:#C7A56A}
+.tbc{color:#C7A56A;font-style:normal;font-size:13px;letter-spacing:.04em}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;margin-top:90px;padding-top:30px;border-top:1px solid rgba(247,243,235,.08);font-size:12px;letter-spacing:.08em;color:rgba(247,243,235,.62)}
+.legal a{color:rgba(247,243,235,.62);text-decoration:none}.legal a:hover{color:#C7A56A}
+@media(max-width:720px){.wrap{padding:0 20px}.sec{padding:96px 0}.split{gap:48px}.hide-sm{display:none}}
+</style>
+</helmet>
+
+<div style="position: relative; width: 100%; overflow-x: hidden; background: #10100E">
+
+<!-- NAVIGATION -->
+<header class="{{navClass}}">
+<div class="wrap nav-in">
+<a class="mark" href="Main.dc.html" aria-label="CYORA home">CYORA</a>
+<nav class="nav-links" aria-label="Primary">
+<a class="on" href="Main.dc.html" aria-current="page">Home</a>
+<a href="Story.dc.html">Our Story</a>
+<a href="Products.dc.html">Our Products</a>
+<a href="Quality.dc.html">Quality &amp; Sourcing</a>
+<a href="Export.dc.html">Export &amp; Wholesale</a>
+<a href="Contact.dc.html">Contact</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 14px">
+<a class="btn btn-gold nav-cta" href="Export.dc.html">Request a Quote</a>
+<button class="burger" type="button" aria-label="{{menuLabel}}" aria-expanded="{{menuOpen}}" onClick="{{toggleMenu}}">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 8h18M3 16h18"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav class="mnav" aria-label="Mobile">
+<a class="ml" href="Main.dc.html">Home</a>
+<a class="ml" href="Story.dc.html">Our Story</a>
+<a class="ml" href="Products.dc.html">Our Products</a>
+<a class="ml" href="Quality.dc.html">Quality &amp; Sourcing</a>
+<a class="ml" href="Export.dc.html">Export &amp; Wholesale</a>
+<a class="ml" href="Contact.dc.html">Contact</a>
+<a class="btn btn-gold" href="Export.dc.html" style="margin-top: 32px">Request a Quote</a>
+</nav>
+</sc-if>
+
+<main>
+<!-- HERO -->
+<section aria-label="Introduction" style="position: relative; min-height: 940px; display: flex; align-items: flex-end; overflow: hidden">
+<figure class="ph ph-green drift" style="position: absolute; inset: 0">
+<div class="ph-art"></div>
+<div class="shade"></div>
+<figcaption class="ph-cap" style="left: auto; right: 56px; bottom: 40px; align-items: flex-end; text-align: right"><b>Photo placeholder</b>Sri Lankan cinnamon plantation at sunrise — morning mist, lush foliage, golden light</figcaption>
+</figure>
+<div class="wrap" style="position: relative; z-index: 3; padding-bottom: 140px; padding-top: 220px">
+<p class="eyebrow rise" style="margin: 0 0 36px">Ceylon Cinnamon · Sri Lanka</p>
+<h1 class="serif rise d1" style="margin: 0; font-size: clamp(56px, 9vw, 132px); line-height: .96; color: #F7F3EB; max-width: 1000px">Nature’s Finest.<br><em style="color: #C7A56A; font-style: italic">From Sri Lanka.</em></h1>
+<p class="lede rise d2" style="margin: 40px 0 0; font-size: 20px; color: rgba(247,243,235,.86); max-width: 560px">Discover the distinctive character of Ceylon cinnamon, thoughtfully presented for international markets.</p>
+<div class="rise d3" style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 52px">
+<a class="btn btn-gold" href="Products.dc.html">Explore Our Cinnamon</a>
+<a class="btn btn-ghost" href="Export.dc.html">Partner With CYORA</a>
+</div>
+</div>
+<a href="#intro" class="rise d4 hide-sm" aria-label="Scroll to brand introduction" style="position: absolute; z-index: 3; left: 50%; bottom: 36px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 12px; color: rgba(247,243,235,.6); text-decoration: none; font-size: 10px; letter-spacing: .4em; text-transform: uppercase; min-height: 44px">Scroll<span style="width: 1px; height: 48px; background: linear-gradient(#C7A56A, transparent)"></span></a>
+</section>
+
+<!-- BRAND INTRODUCTION -->
+<section id="intro" class="sec ivory">
+<div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 80px; align-items: start">
+<div class="reveal">
+<p class="eyebrow" style="margin: 0 0 32px">The House of CYORA</p>
+<h2 class="serif" style="margin: 0; font-size: clamp(44px, 5.6vw, 82px); line-height: 1.02; color: #10100E">Some Stories Begin<br>With a Place.</h2>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 28px; padding-top: 12px">
+<p class="lede" style="margin: 0; font-size: 21px; color: #10100E">Ours begins on a tropical island, where warm rain, coastal breezes and patient hands have shaped one of the world’s most treasured spices.</p>
+<p class="lede" style="margin: 0">Ceylon cinnamon carries the character of its origin — delicate, sweetly aromatic and layered — and it is cherished for exactly that reason. At CYORA, we believe a spice this distinctive deserves to be presented with the same care that goes into making it.</p>
+<p class="lede" style="margin: 0">That is why we focus on what serious buyers ask about first: a clear origin, careful sourcing, consistent product, honest specifications and a responsible way of doing business. Beautiful presentation matters. Trust matters more.</p>
+<a class="link-arrow" href="Story.dc.html" style="color: #7A4227">Read Our Story <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h26M22 1l4 4-4 4"></path></svg></a>
+</div>
+</div>
+</section>
+
+<!-- ORIGIN STORY -->
+<section aria-labelledby="origin-h" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(560px, 100%), 1fr)); background: #10100E">
+<figure class="ph ph-green zoom" style="min-height: 860px">
+<div class="ph-art"></div>
+<div class="ph-frame"></div>
+<figcaption class="ph-cap"><b>Photo placeholder</b>Warm sunlight filtering through a Sri Lankan cinnamon plantation</figcaption>
+</figure>
+<div style="display: flex; align-items: center; padding: 120px clamp(24px, 7vw, 120px)">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 30px; max-width: 560px">
+<p class="eyebrow" style="margin: 0">Origin</p>
+<h2 id="origin-h" class="serif" style="margin: 0; font-size: clamp(42px, 4.8vw, 72px); line-height: 1.04; color: #F7F3EB">Born From the<br>Land of Ceylon.</h2>
+<p class="lede" style="margin: 0">For centuries, the name Ceylon has travelled the world alongside cinnamon. Merchants crossed oceans for the fragrant quills of this island, and today true cinnamon — <em>Cinnamomum verum</em> — remains closely tied to Sri Lanka’s identity.</p>
+<p class="lede" style="margin: 0">It grows in the island’s humid lowlands, where the trees are cut back so that slender new shoots rise from the base. The bark is scraped, its delicate inner layer eased free, and the thin sheets are layered and rolled into quills that dry slowly in the shade.</p>
+<p class="lede" style="margin: 0">It is quiet, skilled work, and every quill carries a little of it. From those fields to a buyer’s warehouse on the other side of the world, our role is to keep that story intact.</p>
+</div>
+</div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="sec" aria-labelledby="prod-h">
+<div class="wrap">
+<div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 80px">
+<div>
+<p class="eyebrow" style="margin: 0 0 28px">The Collection</p>
+<h2 id="prod-h" class="serif" style="margin: 0; font-size: clamp(42px, 5vw, 76px); line-height: 1.02">Two Expressions of<br>Ceylon Cinnamon.</h2>
+</div>
+<a class="link-arrow" href="Products.dc.html">View Full Catalogue <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h26M22 1l4 4-4 4"></path></svg></a>
+</div>
+<div class="cards">
+<a class="pcard zoom reveal" href="Products.dc.html">
+<figure class="ph ph-brown" style="aspect-ratio: 5 / 4">
+<div class="ph-art"></div>
+<div class="ph-frame"></div>
+<figcaption class="ph-cap"><b>Photo placeholder</b>Ceylon cinnamon quills arranged on dark natural stone</figcaption>
+</figure>
+<div style="padding: 48px 44px 52px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
+<span style="font-size: 12px; letter-spacing: .32em; color: #C7A56A">PRODUCT 01</span>
+<span style="font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #C7A56A; border: 1px dashed rgba(199,165,106,.6); padding: 7px 12px">Grade: [Awaiting spec — e.g. C5]</span>
+</div>
+<h3 class="serif" style="margin: 0; font-size: 44px; line-height: 1.05; color: #F7F3EB">Ceylon Cinnamon<br>Sticks / Rolls</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.75; color: rgba(247,243,235,.74)">Distinctive Ceylon cinnamon in carefully presented quill form for professional buyers and discerning customers.</p>
+<span class="link-arrow">Explore Cinnamon Sticks <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h26M22 1l4 4-4 4"></path></svg></span>
+</div>
+</a>
+<a class="pcard zoom reveal" href="Products.dc.html">
+<figure class="ph" style="aspect-ratio: 5 / 4">
+<div class="ph-art"></div>
+<div class="ph-frame"></div>
+<figcaption class="ph-cap"><b>Photo placeholder</b>Fine Ceylon cinnamon powder in a premium ceramic bowl</figcaption>
+</figure>
+<div style="padding: 48px 44px 52px; display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 12px; letter-spacing: .32em; color: #C7A56A">PRODUCT 02</span>
+<h3 class="serif" style="margin: 0; font-size: 44px; line-height: 1.05; color: #F7F3EB">Pure Ceylon<br>Cinnamon Powder</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.75; color: rgba(247,243,235,.74)">Finely presented Ceylon cinnamon powder for culinary applications, retail packaging, and suitable food-manufacturing uses.</p>
+<span class="link-arrow">Explore Cinnamon Powder <svg width="28" height="10" viewBox="0 0 28 10" fill="none" stroke="currentColor" aria-hidden="true"><path d="M0 5h26M22 1l4 4-4 4"></path></svg></span>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="sec ivory" aria-labelledby="phil-h">
+<div class="wrap">
+<div class="reveal" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 28px; margin-bottom: 88px">
+<p class="eyebrow" style="margin: 0">The CYORA Philosophy</p>
+<h2 id="phil-h" class="serif" style="margin: 0; font-size: clamp(42px, 5vw, 76px); line-height: 1.04; max-width: 900px">More Than a Spice.<br><em style="color: #7A4227">A Story of Origin.</em></h2>
+</div>
+<div class="vals reveal">
+<div class="val">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7A4227" stroke-width="1" aria-hidden="true"><path d="M8 32C8 18 18 8 33 7c0 15-10 25-25 25z"></path><path d="M8 32 24 16"></path></svg>
+<h3 class="serif" style="margin: 0; font-size: 30px; font-weight: 400">Sri Lankan Origin</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(16,16,14,.72)">Our products are Ceylon cinnamon from Sri Lanka — the island whose name the spice has carried for generations. Origin is where our story, and every conversation, begins.</p>
+</div>
+<div class="val">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7A4227" stroke-width="1" aria-hidden="true"><circle cx="17" cy="17" r="10"></circle><path d="m25 25 9 9M13 17h8M17 13v8"></path></svg>
+<h3 class="serif" style="margin: 0; font-size: 30px; font-weight: 400">Product-Focused Quality</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(16,16,14,.72)">We put the product first: clear identification, stated specifications, and documentation shared openly so buyers can evaluate each lot against their own requirements.</p>
+</div>
+<div class="val">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7A4227" stroke-width="1" aria-hidden="true"><path d="M6 14 20 7l14 7v14l-14 7-14-7z"></path><path d="M6 14l14 7 14-7M20 21v14"></path></svg>
+<h3 class="serif" style="margin: 0; font-size: 30px; font-weight: 400">Thoughtful Presentation</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(16,16,14,.72)">From retail-ready packs to bulk export cartons, presentation should protect the spice and honour it. Packaging is discussed with each partner, not imposed.</p>
+</div>
+<div class="val">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#7A4227" stroke-width="1" aria-hidden="true"><circle cx="20" cy="20" r="14"></circle><path d="M6 20h28M20 6c5 4 5 24 0 28M20 6c-5 4-5 24 0 28"></path></svg>
+<h3 class="serif" style="margin: 0; font-size: 30px; font-weight: 400">International Partnerships</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: rgba(16,16,14,.72)">We want long-term relationships built on responsiveness and straight answers — with importers, distributors and food businesses who value a reliable conversation.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- AI BRAND AMBASSADOR (optional) -->
+<sc-if value="{{showAmbassador}}" hint-placeholder-val="{{ true }}">
+<section class="sec" aria-labelledby="amb-h" style="background: #0D0D0B">
+<div class="wrap split">
+<figure class="ph ph-ivory zoom reveal" style="aspect-ratio: 4 / 5">
+<div class="ph-art"></div>
+<div class="ph-frame" style="border-color: rgba(122,66,39,.3)"></div>
+<button type="button" aria-label="Play brand story film (video placeholder)" style="position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 96px; height: 96px; border-radius: 50%; border: 1px solid #7A4227; background: rgba(247,243,235,.7); color: #7A4227; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+</button>
+<figcaption class="ph-cap"><b>Video placeholder</b>AI-generated portrait film: silver-haired 93-year-old businesswoman, cream tailoring, subtle gold jewellery</figcaption>
+</figure>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 28px">
+<p class="eyebrow" style="margin: 0">Stories of Cinnamon</p>
+<h2 id="amb-h" class="serif" style="margin: 0; font-size: clamp(40px, 4.6vw, 68px); line-height: 1.04">Meet Amara,<br><em style="color: #C7A56A">our storyteller.</em></h2>
+<p class="lede" style="margin: 0">Amara guides short films about the heritage of Ceylon cinnamon and introduces our products — with ninety-three years of imagined curiosity, a warm smile and a fondness for a good cup of cinnamon tea.</p>
+<div style="border: 1px solid rgba(199,165,106,.35); padding: 22px 24px; display: flex; gap: 16px; align-items: flex-start">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C7A56A" stroke-width="1.2" aria-hidden="true" style="flex: none; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.5"></path></svg>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: rgba(247,243,235,.8)"><strong style="color: #F7F3EB; font-weight: 500">Amara is a fictional, AI-generated brand ambassador.</strong> She is not a real person, a CYORA founder, employee, customer or exporter, and her films are illustrative brand storytelling.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<a class="btn btn-ghost" href="Story.dc.html">Watch the Story</a>
+</div>
+</div>
+</div>
+</section>
+</sc-if>
+
+<!-- FROM SRI LANKA TO THE WORLD -->
+<section class="sec forest" aria-labelledby="world-h" style="position: relative; overflow: hidden">
+<svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55">
+<g fill="none" stroke="rgba(199,165,106,.18)" stroke-width=".6">
+<path d="M0 83h1000M0 167h1000M0 250h1000M0 333h1000M0 417h1000"></path>
+<path d="M83 0v500M167 0v500M250 0v500M333 0v500M417 0v500M500 0v500M583 0v500M667 0v500M750 0v500M833 0v500M917 0v500"></path>
+</g>
+<g fill="none" stroke="rgba(199,165,106,.45)" stroke-width=".8" stroke-dasharray="2 5">
+<path d="M724 228C600 120 420 100 300 150"></path>
+<path d="M724 228C640 90 560 70 500 110"></path>
+<path d="M724 228C820 150 880 160 930 190"></path>
+<path d="M724 228C620 300 420 340 260 300"></path>
+<path d="M724 228C800 320 860 360 900 380"></path>
+</g>
+<circle cx="724" cy="228" r="6" fill="none" stroke="#C7A56A" style="animation: pulse 3.2s ease-out infinite"></circle>
+<circle cx="724" cy="228" r="4" fill="#C7A56A"></circle>
+</svg>
+<div class="wrap" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 80px; align-items: end">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 30px">
+<p class="eyebrow" style="margin: 0">From Sri Lanka to the World</p>
+<h2 id="world-h" class="serif" style="margin: 0; font-size: clamp(40px, 4.8vw, 72px); line-height: 1.04">Connecting Sri Lankan Cinnamon With Global Markets.</h2>
+<p class="lede" style="margin: 0; color: rgba(247,243,235,.84)">CYORA welcomes enquiries from international importers, distributors, wholesalers, retailers and food businesses. Tell us what your market needs, and we will respond with clear information and a considered proposal.</p>
+<div><a class="btn btn-gold" href="Export.dc.html">Discuss Your Requirements</a></div>
+</div>
+<ul class="reveal" style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid rgba(199,165,106,.3)">
+<li style="display: flex; gap: 24px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid rgba(199,165,106,.3)"><span class="serif" style="font-size: 18px; color: #C7A56A">01</span><span style="font-size: 18px; letter-spacing: .02em">Wholesale enquiries</span></li>
+<li style="display: flex; gap: 24px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid rgba(199,165,106,.3)"><span class="serif" style="font-size: 18px; color: #C7A56A">02</span><span style="font-size: 18px; letter-spacing: .02em">Product specifications</span></li>
+<li style="display: flex; gap: 24px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid rgba(199,165,106,.3)"><span class="serif" style="font-size: 18px; color: #C7A56A">03</span><span style="font-size: 18px; letter-spacing: .02em">Packaging discussions</span></li>
+<li style="display: flex; gap: 24px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid rgba(199,165,106,.3)"><span class="serif" style="font-size: 18px; color: #C7A56A">04</span><span style="font-size: 18px; letter-spacing: .02em">Export quotations</span></li>
+<li style="display: flex; gap: 24px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid rgba(199,165,106,.3)"><span class="serif" style="font-size: 18px; color: #C7A56A">05</span><span style="font-size: 18px; letter-spacing: .02em">Sample requests, subject to availability</span></li>
+</ul>
+</div>
+</section>
+
+<!-- QUALITY PREVIEW -->
+<section class="sec" aria-labelledby="trust-h">
+<div class="wrap split">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 30px; order: 2">
+<p class="eyebrow" style="margin: 0">Quality &amp; Sourcing</p>
+<h2 id="trust-h" class="serif" style="margin: 0; font-size: clamp(42px, 5vw, 76px); line-height: 1.02">Trust Is Built<br>on Details.</h2>
+<p class="lede" style="margin: 0">Behind every shipment sits a set of details a professional buyer needs to see: how the product is identified, the grade and specification it is sold against, traceability where available, appropriate laboratory testing, suitable packaging and clear export documentation.</p>
+<p class="lede" style="margin: 0">We treat these as the foundation of a partnership, and we share what we have openly — so you can judge each product on evidence, not adjectives.</p>
+<div><a class="btn btn-ghost" href="Quality.dc.html">Discover Our Approach to Quality</a></div>
+</div>
+<div class="reveal" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; order: 1">
+<figure class="ph ph-brown zoom" style="aspect-ratio: 3 / 4; grid-row: span 2">
+<div class="ph-art"></div>
+<figcaption class="ph-cap"><b>Photo placeholder</b>Skilled cinnamon peeler working with quills</figcaption>
+</figure>
+<figure class="ph zoom" style="aspect-ratio: 1 / 1">
+<div class="ph-art"></div>
+<figcaption class="ph-cap"><b>Photo</b>Export cartons, labelled</figcaption>
+</figure>
+<figure class="ph ph-green zoom" style="aspect-ratio: 1 / 1">
+<div class="ph-art"></div>
+<figcaption class="ph-cap"><b>Photo</b>Naturally peeling bark</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section aria-labelledby="cta-h" style="position: relative; min-height: 760px; display: flex; align-items: center; overflow: hidden">
+<figure class="ph ph-brown" style="position: absolute; inset: 0">
+<div class="ph-art"></div>
+<div style="position: absolute; inset: 0; background: rgba(16,16,14,.62)"></div>
+<figcaption class="ph-cap" style="left: auto; right: 56px; align-items: flex-end"><b>Photo placeholder</b>Dramatic close-up of Ceylon cinnamon quills, dark overlay</figcaption>
+</figure>
+<div class="wrap reveal" style="position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 34px; padding-top: 120px; padding-bottom: 120px">
+<svg width="56" height="12" viewBox="0 0 56 12" fill="none" stroke="#C7A56A" aria-hidden="true"><path d="M0 6h22M34 6h22"></path><path d="M28 1l5 5-5 5-5-5z"></path></svg>
+<h2 id="cta-h" class="serif" style="margin: 0; font-size: clamp(40px, 5.4vw, 80px); line-height: 1.04; max-width: 1000px">Let’s Bring the Story of Ceylon Cinnamon to Your Market.</h2>
+<p class="lede" style="margin: 0; color: rgba(247,243,235,.86)">Tell us about your business, product requirements, and target market. Let’s explore a potential partnership.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px">
+<a class="btn btn-gold" href="Export.dc.html">Request a Wholesale Quote</a>
+<a class="btn btn-ghost" href="Contact.dc.html">Contact CYORA</a>
+</div>
+</div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+<div class="wrap">
+<div class="foot-grid">
+<div style="display: flex; flex-direction: column; gap: 18px; grid-column: span 1">
+<a class="mark" href="Main.dc.html" style="font-size: 34px; padding-left: 0">CYORA</a>
+<p class="serif" style="margin: 0; font-size: 22px; font-style: italic; color: #F7F3EB">Nature’s Finest. From Sri Lanka.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.7">Rooted in Sri Lankan heritage.<br>Crafted for the world.</p>
+</div>
+<div>
+<h4>Explore</h4>
+<ul>
+<li><a href="Main.dc.html">Home</a></li>
+<li><a href="Story.dc.html">Our Story</a></li>
+<li><a href="Quality.dc.html">Quality &amp; Sourcing</a></li>
+<li><a href="Export.dc.html">Export &amp; Wholesale</a></li>
+<li><a href="Contact.dc.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Products</h4>
+<ul>
+<li><a href="Products.dc.html">Ceylon Cinnamon Sticks</a></li>
+<li><a href="Products.dc.html">Ceylon Cinnamon Powder</a></li>
+<li><a href="Export.dc.html">Request a Quote</a></li>
+</ul>
+</div>
+<div>
+<h4>Business Enquiries</h4>
+<ul>
+<li><a href="Contact.dc.html"><span class="tbc">[enquiries@yourdomain.com]</span></a></li>
+<li><a href="Contact.dc.html"><span class="tbc">WhatsApp [+94 XX XXX XXXX]</span></a></li>
+</ul>
+<h4 style="margin-top: 30px">Follow</h4>
+<ul style="flex-direction: row; gap: 18px">
+<li><a href="Contact.dc.html" aria-label="Instagram — handle to be confirmed"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".6"></circle></svg></a></li>
+<li><a href="Contact.dc.html" aria-label="LinkedIn — page to be confirmed"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7M8 7v.5M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg></a></li>
+<li><a href="Contact.dc.html" aria-label="Facebook — page to be confirmed"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"></path></svg></a></li>
+</ul>
+</div>
+</div>
+<div class="legal">
+<span>CYORA · Ceylon cinnamon of Sri Lankan origin · © <span class="tbc">[Year] [Registered company name]</span></span>
+<span style="display: flex; gap: 28px"><a href="Legal.dc.html">Privacy Policy</a><a href="Legal.dc.html">Terms and Conditions</a><a href="Legal.dc.html">Cookies</a></span>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showAmbassador":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":8600}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { scrolled: false, menuOpen: false };
+    this._onScroll = () => {
+      const s = (window.scrollY || document.documentElement.scrollTop || 0) > 40;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+  }
+  componentDidMount() { window.addEventListener('scroll', this._onScroll, { passive: true }); this._onScroll(); }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  renderVals() {
+    const st = this.state || {};
+    return {
+      showAmbassador: this.props.showAmbassador ?? true,
+      navClass: (st.scrolled || st.menuOpen) ? 'nav nav-solid' : 'nav',
+      menuOpen: !!st.menuOpen,
+      menuLabel: st.menuOpen ? 'Close menu' : 'Open menu',
+      toggleMenu: () => this.setState({ menuOpen: !st.menuOpen })
+    };
+  }
+}
+</script>
+</body>
+</html>
