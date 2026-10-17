@@ -25,9 +25,12 @@ export default function Home() {
           captionClassName="!left-auto right-5 md:!right-14 !bottom-10 items-end text-right"
         />
         <div className="wrap relative z-[3] pb-36 pt-56">
-          <p className="eyebrow rise mb-9">Ceylon Cinnamon · Sri Lanka</p>
-          <h1 className="serif rise d1 max-w-[1000px] text-[clamp(56px,9vw,132px)] leading-[.96]">
-            Nature’s Finest.<br /><em className="text-gold">From Sri Lanka.</em>
+          {/* The eyebrow sits inside the h1 so the page's main heading names what CYORA does, not only the tagline. */}
+          <h1>
+            <span className="eyebrow rise mb-9">Ceylon Cinnamon Exporter · Sri Lanka</span>
+            <span className="serif rise d1 block max-w-[1000px] text-[clamp(56px,9vw,132px)] leading-[.96]">
+              Nature’s Finest.<br /><em className="text-gold">From Sri Lanka.</em>
+            </span>
           </h1>
           <p className="lede rise d2 mt-10 max-w-[560px] text-xl text-ivory/85">
             Discover the distinctive character of Ceylon cinnamon, thoughtfully presented for international markets.
@@ -68,6 +71,7 @@ export default function Home() {
             <p className="lede">For centuries, the name Ceylon has travelled the world alongside cinnamon. Merchants crossed oceans for the fragrant quills of this island, and today true cinnamon — <em>Cinnamomum verum</em> — remains closely tied to Sri Lanka’s identity.</p>
             <p className="lede">It grows in the island’s humid lowlands, where the trees are cut back so that slender new shoots rise from the base. The bark is scraped, its delicate inner layer eased free, and the thin sheets are layered and rolled into quills that dry slowly in the shade.</p>
             <p className="lede">It is quiet, skilled work, and every quill carries a little of it. From those fields to a buyer’s warehouse on the other side of the world, our role is to keep that story intact.</p>
+            <Link href="/ceylon-cinnamon" className="link-arrow">Ceylon vs Cassia — Read the Cinnamon Guide <Arrow /></Link>
           </Reveal>
         </div>
       </section>

@@ -1,18 +1,19 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import Photo from '@/components/Photo';
 import ProductGallery, { type GalleryItem } from '@/components/ProductGallery';
 import Reveal from '@/components/Reveal';
 import JsonLd from '@/components/JsonLd';
+import { Arrow } from '@/components/Icons';
 import { site } from '@/lib/site';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Ceylon Cinnamon Sticks & Powder — Wholesale Products',
+export const metadata = pageMetadata({
+  title: 'Ceylon Cinnamon C5 Sticks & Powder — Wholesale Products',
   description:
-    'Ceylon cinnamon sticks / quills and pure Ceylon cinnamon powder from Sri Lanka for wholesale, bulk export and private-label packaging. Request specifications and a quote.',
-  alternates: { canonical: '/products' },
-};
+    'Grade C5 Ceylon cinnamon sticks / quills and pure Ceylon cinnamon powder from Sri Lanka for wholesale, bulk export and private-label packaging. Request specifications and a quote.',
+  path: '/products',
+});
 
 /**
  * Specification values — replace each [placeholder] with CYORA-verified data.
@@ -71,22 +72,42 @@ const Pill = ({ children }: { children: React.ReactNode }) => (
   <span className="inline-flex items-center border border-dashed border-current px-3.5 py-2 text-[11px] uppercase tracking-[0.2em] opacity-90">{children}</span>
 );
 
-// Product structured data: only name, description, brand and origin — no prices, ratings or certifications.
-const productLd = (name: string, description: string, anchor: string) => ({
+// Product structured data: confirmed facts only (name, origin, grade, pack weight, images) — no prices, ratings or certifications.
+const productLd = (name: string, description: string, anchor: string, images: string[]) => ({
   '@context': 'https://schema.org',
   '@type': 'Product',
   name,
   description,
+  image: images.map((src) => `${site.url}${src}`),
   brand: { '@type': 'Brand', name: 'CYORA' },
+  manufacturer: { '@id': `${site.url}/#organization` },
+  category: 'Spices > Cinnamon',
+  material: 'Ceylon cinnamon (Cinnamomum verum)',
   countryOfOrigin: 'LK',
+  weight: { '@type': 'QuantitativeValue', value: 100, unitCode: 'GRM' },
+  additionalProperty: { '@type': 'PropertyValue', name: 'Grade', value: 'C5' },
   url: `${site.url}/products#${anchor}`,
 });
 
 export default function Products() {
   return (
     <>
-      <JsonLd data={productLd('Ceylon Cinnamon Sticks / Rolls', 'Ceylon cinnamon in quill form from Sri Lanka for professional buyers.', 'sticks')} />
-      <JsonLd data={productLd('Pure Ceylon Cinnamon Powder', 'Ceylon cinnamon powder from Sri Lanka for culinary, retail and food-manufacturing uses.', 'powder')} />
+      <JsonLd
+        data={productLd(
+          'Ceylon Cinnamon Sticks / Rolls — Grade C5',
+          'Grade C5 Ceylon cinnamon sticks (quills) from Sri Lanka for importers, wholesalers, specialist retailers and private-label ranges.',
+          'sticks',
+          ['/images/cinnamonrolls.jpg', '/images/sticks-stone.jpg'],
+        )}
+      />
+      <JsonLd
+        data={productLd(
+          'Pure Ceylon Cinnamon Powder — Grade C5',
+          'Grade C5 pure Ceylon cinnamon powder from Sri Lanka for culinary, retail and food-manufacturing uses.',
+          'powder',
+          ['/images/cinnamonpowder.jpg', '/images/powder-bowl.jpg'],
+        )}
+      />
 
       <PageHero
         eyebrow="The Catalogue"
@@ -110,6 +131,7 @@ export default function Products() {
             </div>
             <p className="lede">Distinctive Ceylon cinnamon in carefully presented quill form for professional buyers and discerning customers. Thin, layered bark rolled into slender quills, with the gentle, sweet aroma Ceylon cinnamon is known for.</p>
             <p className="lede text-base">Suited to importers, wholesalers, specialist retailers and private-label ranges seeking whole Sri Lankan cinnamon sticks.</p>
+            <Link href="/ceylon-cinnamon#grades" className="link-arrow">What does Grade C5 mean? <Arrow /></Link>
             <Specs rows={sticksSpecs} />
             <div className="flex flex-wrap gap-3.5">
               <Link href="/export-wholesale#enquiry" className="btn btn-gold">Request a Quote</Link>

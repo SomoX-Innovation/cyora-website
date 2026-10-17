@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import Photo from '@/components/Photo';
 import Reveal from '@/components/Reveal';
 import JsonLd from '@/components/JsonLd';
 import { site } from '@/lib/site';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: 'From Harvest to Packaging — Our Production Process',
   description:
     'How Ceylon cinnamon becomes a CYORA product: harvest, scrape, peel and roll, dry and grade, inspect, then pack — for sticks and powder, ready for bulk export or private-label packaging.',
-  alternates: { canonical: '/production-process' },
-};
+  path: '/production-process',
+});
 
 type Step = { n: string; id: string; title: string; body: string; src: string; alt: string; tone: 'green' | 'brown' | 'dark' };
 

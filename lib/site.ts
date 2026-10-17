@@ -7,7 +7,8 @@ export const site = {
   name: 'CYORA',
   tagline: 'Nature’s Finest. From Sri Lanka.',
   message: 'Rooted in Sri Lankan heritage. Crafted for the world.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  /** Canonical origin used for canonical URLs, sitemap, Open Graph and JSON-LD. No trailing slash. */
+  url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.cyoracinnamon.com').replace(/\/+$/, ''),
   email: 'sales@cyoracinnamon.com',
   whatsapp: '+94 77 959 7106',
   /** Digits only, e.g. "94771234567". Leave empty until confirmed — the link is hidden while empty. */

@@ -5,6 +5,7 @@ import { SocialIcon } from './Icons';
 const explore = [
   { href: '/', label: 'Home' },
   { href: '/our-story', label: 'Our Story' },
+  { href: '/ceylon-cinnamon', label: 'Ceylon Cinnamon Guide' },
   { href: '/production-process', label: 'Production Process' },
   { href: '/quality-sourcing', label: 'Quality & Sourcing' },
   { href: '/export-wholesale', label: 'Export & Wholesale' },

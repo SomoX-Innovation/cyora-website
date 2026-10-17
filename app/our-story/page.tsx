@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import Photo from '@/components/Photo';
 import Reveal from '@/components/Reveal';
 import { Arrow } from '@/components/Icons';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: 'Our Story — Ceylon Cinnamon Heritage',
   description: 'The land of Ceylon, the cinnamon heritage of Sri Lanka and the craft of turning bark into quills — the story behind CYORA’s Ceylon cinnamon.',
-  alternates: { canonical: '/our-story' },
-};
+  path: '/our-story',
+});
 
 const chapters = [
   ['land', 'I', 'The Land'], ['heritage', 'II', 'Heritage'], ['quill', 'III', 'Bark to Quill'],

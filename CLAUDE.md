@@ -21,9 +21,12 @@ npm run typecheck && npm run lint
 ## Layout
 ```
 app/                    routes (one folder per page) + layout, sitemap.ts, robots.ts, not-found
+app/ceylon-cinnamon/    Ceylon cinnamon guide (Ceylon vs cassia, grades, uses, buying checklist, FAQ + FAQPage JSON-LD)
+app/llms.txt/route.ts   plain-text site summary for AI assistants — confirmed facts only
 app/api/enquiry/route.ts  POST endpoint for all three forms
 components/             Nav, Footer, PageHero, Photo, Reveal, EnquiryForm, ProductGallery, Icons, JsonLd, LegalShell
 lib/site.ts             ALL business details (email, WhatsApp, socials, legal name) — edit here only
+lib/seo.ts              pageMetadata() helper + shared Open Graph/Twitter fields and share image (public/og.jpg)
 lib/enquiry.ts          zod schemas + option lists shared by client forms and the API
 design/                 the original canvas design files (*.dc.html) — visual reference only, not built
 public/images/          real photography goes here (see public/images/README.md)
@@ -79,16 +82,20 @@ descriptive. Slot list and recommended sizes: `public/images/README.md`.
 ## Known TODOs (good next tasks)
 - [ ] Replace placeholders in `lib/site.ts` and product spec rows once CYORA confirms them.
 - [ ] Add real photography to `public/images/` and pass `src` to each `<Photo>`.
-- [ ] Add `/public/og.jpg` (1200×630), favicon/app icons, and wire `openGraph.images` in `app/layout.tsx`.
+- [x] `/public/og.jpg` (1200×630) share card, wired via `lib/seo.ts`; favicon is `app/icon.jpg`.
 - [ ] Swap the in-memory rate limiter for Upstash Redis (or similar) if deploying to serverless/multi-instance.
 - [ ] Turnstile: re-render the widget after "Send another" (currently relies on implicit rendering on load).
-- [ ] Add Organization `email`/`contactPoint`/`logo`/`sameAs` to JSON-LD only once real details exist.
+- [x] Organization JSON-LD has `email`/`contactPoint`/`logo`; `sameAs` fills in automatically once social `href`s are set in `lib/site.ts`.
 - [ ] Legal pages are templates — complete and have them reviewed by a lawyer.
 - [ ] Optional: analytics (would require a consent banner — update the cookie notice first).
 - [ ] Optional: Amara video player once real films exist (keep the fictional-AI disclosure).
 
 ## SEO notes
-Each page exports `metadata` with an original title/description and canonical. Targeted phrases (use naturally,
+Each indexable page exports `metadata = pageMetadata({ title, description, path })` from `lib/seo.ts` — it sets the
+canonical plus matching Open Graph/Twitter tags (a page-level `openGraph` replaces the root one, so don't hand-roll it).
+`site.url` falls back to `https://www.cyoracinnamon.com`; never let canonicals point at localhost. When a page, product
+or confirmed fact changes, update `sitemap.ts` and `app/llms.txt/route.ts` too. General facts on `/ceylon-cinnamon` are
+sourced (BfR on coumarin, SLS 81 on grading) — keep any CYORA-specific statements to confirmed facts. Targeted phrases (use naturally,
 no stuffing): Ceylon cinnamon exporter Sri Lanka · Sri Lankan cinnamon sticks wholesale · Ceylon cinnamon powder
 supplier · Ceylon cinnamon C5 sticks (only where applicable) · bulk Ceylon cinnamon · private-label cinnamon
 packaging · Sri Lankan spice export supplier. `sitemap.ts` and `robots.ts` read `NEXT_PUBLIC_SITE_URL`.

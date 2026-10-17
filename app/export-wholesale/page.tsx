@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import EnquiryForm, { type FieldDef } from '@/components/EnquiryForm';
 import { buyerTypes, packagingOptions, products } from '@/lib/enquiry';
 import { isPlaceholder, site } from '@/lib/site';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: 'Export & Wholesale — Bulk Ceylon Cinnamon Supplier',
   description:
     'Sri Lankan spice export enquiries: bulk Ceylon cinnamon sticks and powder for importers, distributors, wholesalers, retailers, private-label and food manufacturers.',
-  alternates: { canonical: '/export-wholesale' },
-};
+  path: '/export-wholesale',
+});
 
 const services = [
   ['Importer & distributor enquiries', 'Ongoing supply of Ceylon cinnamon for your market, planned around your volumes, timelines and documentation needs.'],

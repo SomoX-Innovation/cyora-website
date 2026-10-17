@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import EnquiryForm, { type FieldDef } from '@/components/EnquiryForm';
 import { contactTypes } from '@/lib/enquiry';
 import { isPlaceholder, site } from '@/lib/site';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: 'Contact CYORA — Ceylon Cinnamon Enquiries',
   description: 'Contact CYORA for general, wholesale or product enquiries about Ceylon cinnamon sticks and powder from Sri Lanka.',
-  alternates: { canonical: '/contact' },
-};
+  path: '/contact',
+});
 
 const fields: FieldDef[] = [
   { name: 'enquiryType', label: 'Enquiry type', type: 'segmented', options: contactTypes, defaultValue: 'general' },

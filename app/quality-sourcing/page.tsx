@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
 import PageHero from '@/components/PageHero';
 import Photo from '@/components/Photo';
 import Reveal from '@/components/Reveal';
 import EnquiryForm, { type FieldDef } from '@/components/EnquiryForm';
 import { Doc, Flask } from '@/components/Icons';
 import { documentTypes, products } from '@/lib/enquiry';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: 'Quality & Sourcing — Ceylon Cinnamon Specifications',
   description:
     'How to evaluate CYORA’s Ceylon cinnamon: origin, product specifications, traceability where available, laboratory documentation, packaging and export documents. Request documents online.',
-  alternates: { canonical: '/quality-sourcing' },
-};
+  path: '/quality-sourcing',
+});
 
 const pillars = [
   ['Product origin', 'Each product is identified as Ceylon cinnamon (Cinnamomum verum) of Sri Lankan origin. Supporting origin documentation can be discussed per shipment.', 'origin details, certificate of origin'],
